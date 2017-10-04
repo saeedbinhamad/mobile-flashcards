@@ -24,13 +24,18 @@ class NewQuestionView extends Component {
     const { title, questions } = this.props.navigation.state.params;
 
     const { question_text, answer_text } = this.state;
+    let alert = null;
+    
     if (question_text === '') {
-      Alert.alert('Missing question', 'You need to fill in the question field');
-      return;
+      alert = { title: 'Missing question', content: 'You need to fill in the question field' };
     }
+    
     if (answer_text === '') {
-      Alert.alert('Missing question', 'You need to fill in the answer field');
-      return;
+      alert = { title: 'Missing question', content: 'You need to fill in the answer field' };
+    }
+    
+    if (alert) {
+      Alert.alert(alert.title, alert.content)
     }
     const params = { title, questions, question_text, answer_text };
     this.props.dispatch(addCard(params));

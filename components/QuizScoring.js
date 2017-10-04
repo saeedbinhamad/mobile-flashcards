@@ -7,7 +7,7 @@ export default function QuizScoring({ onCorrect, onIncorrect }) {
   return (
     <View style={styles.container}>
       <TextInButton style={{ backgroundColor: green }} onPress={onCorrect}>
-        {' Correct '}
+        Correct
       </TextInButton>
       <TextInButton style={{ backgroundColor: red }} onPress={onIncorrect}>
         Incorrect

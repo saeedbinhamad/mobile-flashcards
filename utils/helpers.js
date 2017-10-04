@@ -27,8 +27,6 @@ function createNotification() {
 }
 
 export function setLocalNotification() {
-  // system alerts do not appear if iOS app is in foreground
-  //  https://forums.expo.io/t/psa-reminder-notifications-in-ios-foregrounded-apps/641
   if (Platform.OS === 'ios' && eventSubscription === null) {
     eventSubscription = Notifications.addListener(x => {
       Alert.alert(

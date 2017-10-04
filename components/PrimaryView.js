@@ -50,11 +50,9 @@ class PrimaryView extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    decks: state,
-  };
-}
+const mapStateToProps = state => ({
+  decks: state,
+})
 
 const styles = StyleSheet.create({
   item: {

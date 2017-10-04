@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import { gray, blue, white } from '../utils/colors';
 
-export default function TextInButton({ children, onPress, style = {} }) {
+export default TextInButton = ({ children, onPress, style = {} }) => {
   const btnStyle = Platform.OS === 'ios' ? styles.iosBtn : styles.AndroidBtn;
   return (
     <TouchableOpacity onPress={onPress} style={[btnStyle, style]}>

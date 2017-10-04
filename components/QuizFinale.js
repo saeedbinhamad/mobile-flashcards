@@ -32,9 +32,7 @@ export default class QuizFinale extends Component {
           </TextInButton>
           <TextInButton
             style={{ backgroundColor: ltBlue }}
-            onPress={() => {
-              navigation.goBack(null);
-            }}
+            onPress={() => navigation.goBack(null)}
           >
             Back To Deck
           </TextInButton>
